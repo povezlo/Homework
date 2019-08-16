@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+		body {
+			font-family: Arial;
+		}
+
+		.main {
+			margin: 0 40px;
+			width: auto;
+			font-size: 15px;
+		}
+
+		nav {
+			display: grid;
+		}
+
+		.breadcrumb {
+			justify-self: end;
+			background-color: white;
+		}
+
+		.breadcrumb-item a {
+			color: #D1A64A;
+		}
+
+
+		.main h1 {
+			color: #1E3452;
+			font-weight: bolder;
+			margin-bottom: 40px;
+
+		}
+
+		.main .topnav {
+			margin-bottom: 40px;
+			border-bottom: 1px solid #EEEEEE;
+			padding-bottom: 20px;
+		}
+
+		.main .topnav a {
+			color: #333333;
+			margin-right: 50px;
+			text-decoration: none;
+		}
+
+		.main .topnav a:hover {
+			border-bottom: 2px solid #D1A64A;
+			padding-bottom: 22px;
+			text-decoration: none;
+		}
+
+		/* Style the tab */
+		.tab {
+			width: auto;
+			height: 46px;
+			overflow: hidden;
+			margin: 0 auto;
+			margin-bottom: 40px;
+
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button,
+		.header button {
+			width: 199px;
+			height: 46px;
+			background-color: #EEEEEE;
+			border-radius: 30px;
+			text-align: center;
+			text-decoration: none;
+			border: none;
+			cursor: pointer;
+			transition: 0.3s;
+			color: #21B4C8;
+			margin-right: 12px;
+		}
+
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #21B4C8;
+			color: white;
+		}
+
+		.tabcontent {
+			width: 250px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 20px;
+			padding: 20px;
+		}
+
+		.header {
+			background: #eeeeee;
+			height: 90px;
+			margin-bottom: 40px;
+			display: grid;
+			grid-template-columns: 1fr 116px 1fr;
+		}
+
+		.header div:nth-child(1) {
+			font-size: 26px;
+			text-align: center;
+			line-height: 90px;
+		}
+
+		.header div:nth-child(2) {
+			font-size: 46px;
+			font-weight: 600;
+			color: white;
+			background: #D1A64A;
+			padding: 10px;
+			padding-left: 15px;
+		}
+
+		.header div:nth-child(3) {
+			font-size: 18px;
+			display: grid;
+			align-self: center;
+			justify-self: center;
+		}
+
+		.header div button {
+			width: 320px;
+			padding: 0 20px;
+			box-sizing: content-box;
+			background-color: #21B4C8;
+			color: white;
+			margin: 0 auto;
+		}
+
+		.container{
+			display: grid;
+			grid: auto-flow / 1fr 1fr 1fr;
+		}
+		
+				.container div{
+			justify-self: start;
+					align-self: center;
+			
+		}
+
+		/* Style the tab content */
+	</style>
+</head>
+
+<body>
+
+	<section class="main">
+		<div class="header">
+			<div>
+				Получите доступ ко всем курсам со скидкой
+			</div>
+			<div>
+				50%
+			</div>
+			<div>
+				<button class="tablinks">Получить вечный доступ со скидкой</button>
+			</div>
+		</div>
+
+
+
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#home">Главная</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Онлайн курсы</li>
+			</ol>
+		</nav>
+
+		<h1>Онлайн курсы</h1>
+
+		<div class="topnav">
+			<a href="#salesMarketing">Продажи и маркетинг</a>
+			<a href="#management">Операционный менеджмент</a>
+			<a href="#supportFunction">Поддерживающие функции</a>
+			<a href="#profi">Профессиональное развитие</a>
+		</div>
+
+		<div class="tab">
+			<button class="tablinks" onclick="openTab(event, 'service')">Сервис</button>
+			<button class="tablinks" onclick="openTab(event, 'restaurant')">Рестораны и бары</button>
+			<button class="tablinks" onclick="openTab(event, 'numberFond')">Номерной фонд</button>
+			<button class="tablinks" onclick="openTab(event, 'exploitation')">Эксплуатация</button>
+			<button class="tablinks" onclick="openTab(event, 'spa')">СПА и рекреация</button>
+			<button class="tablinks" onclick="openTab(event, 'security')">Безопасность</button>
+		</div>
+
+		<div class="container">
+
+			<div id="service" class="tabcontent">
+				<h3>Сервис</h3>
+
+			</div>
+
+			<div id="restaurant" class="tabcontent">
+				<h3>Рестораны и бары</h3>
+
+			</div>
+
+			<div id="numberFond" class="tabcontent">
+				<h3>Номерной фонд</h3>
+			</div>
+
+			<div id="exploitation" class="tabcontent">
+				<h3>Эксплуатация</h3>
+
+			</div>
+			<div id="spa" class="tabcontent">
+				<h3>СПА и рекреация</h3>
+
+			</div>
+			<div id="security" class="tabcontent">
+				<h3>Безопасность</h3>
+			</div>
+		</div>
+	</section>
+	<script>
+		function openTab(evt, tabName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+
+</body>
+
+</html>
